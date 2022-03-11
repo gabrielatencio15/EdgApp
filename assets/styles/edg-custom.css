@@ -1,0 +1,175 @@
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../src/fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../src/fonts/Ubuntu-Bold.ttf');
+}
+
+.main-header{
+  position: relative;
+  z-index: 10;
+  height: 150px;
+}
+
+.menu-active span {
+    color: #000;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.brand-image {
+    float: left;
+    line-height: .8;
+    /* margin-left: 0.8rem; */
+    margin-right: 0.5rem;
+    margin-top: -35px;
+    max-height: 65px;
+    width: auto;
+}
+
+
+/* Animación botón de WhatsApp */
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms both;
+}
+
+ @-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animación botón de WhatsApp */
+
+
+.floating-whatsapp{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:40px;
+	box-shadow: 0px 0px 4px #999;
+  z-index:100;
+}
+
+.floating-whatsapp:hover{
+	color:#FFF;
+}
+
+.my-floating-whatsapp{
+	margin-top:10px;
+}
+
+.header-options-color{
+  color: #FFF;
+}
+
+.brand-text{
+  color: #FFF;
+  text-shadow: 1px 1px 4px black;
+}
+
+html,body{
+  height:100%;
+}
+
+.banner{
+  background: url('../src/img/home-background.webp') fixed center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.white-line{
+  display: block;
+  width: 70px;
+  height: 6px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.menu-links{
+  font-family: 'Ubuntu-Bold',sans-serif;
+}
+
+.title-lg{
+  font-size: 50px;
+  line-height: 1;
+  color: #FFF;
+  font-family: 'Ubuntu-Bold',sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.text-content {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-family: 'Ubuntu-Regular',sans-serif;
+  color: #FFF;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #8e9090;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .viewport {
+      position:absolute;
+      right:0;
+      left:0;
+      top:0;
+      bottom:0;
+      overflow-x:hidden;
+      overflow-y:scroll;
+  }
+
+  .banner{
+      height:auto;
+  }
+
+  .banner .banner-container {
+      position:relative;
+      overflow:hidden;
+  }
+  
+}

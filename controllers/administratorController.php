@@ -8,10 +8,12 @@ class administratorController extends Administrator{
 	function index(){
 		require_once('views/all/header.php');
 		//require_once('views/all/nav.php');
+		require_once('views/all/home.php');
 		require_once('views/index/index.php');
 		require_once('views/index/modals.php');
 		require_once('views/all/footer.php');
 	}
+	
 
 	function table_users(){
 		?>

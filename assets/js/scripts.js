@@ -96,10 +96,8 @@
 	Contacto: oscarfamado@gmail.com
 */
 
-$(".header-options").click(function() {
+$(".header-options").on("click", function() {
 	let e = this;
-
-	console.log(e);
 
 	// setTimeout(function() {
  	$(".menu-active").removeClass("menu-active");
@@ -108,6 +106,44 @@ $(".header-options").click(function() {
 	// setTimeout(function() {
 	 	$(e).addClass("menu-active");
 	// },200);
-
+	changeContent(e.id);
 	//console.log(e);
 });
+
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+function changeContent(idButton)
+{
+	switch(idButton)
+	{
+		case 'home-header':
+			$.ajax({        
+				type: 'POST',
+				data: null,
+				url:  './views/all/home.php',              
+				success:  function (response) {
+						$("#main-container").css('display','none').html(response).slideDown("slow");;
+					
+				}
+			});
+			break;
+			case 'about-header':
+				$.ajax({        
+					type: 'POST',
+					data: null,
+					url:  './views/all/about.php',              
+					success:  function (response) {
+							$("#main-container").css('display','none').html(response).slideDown("slow");;
+						
+					}
+				});
+				break;
+		default:
+			$("#main-container").fadeIn( "slow", function() {
+				$("#main-container").html('');
+			  });
+			
+	}
+}
