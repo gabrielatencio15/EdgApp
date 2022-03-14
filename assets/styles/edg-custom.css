@@ -106,7 +106,15 @@ html,body{
   height:100%;
 }
 
-.banner{
+.banner-home{
+  background: url('../src/img/home-background.webp') fixed center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.banner-about{
   background: url('../src/img/home-background.webp') fixed center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -143,6 +151,54 @@ html,body{
   font-family: 'Ubuntu-Regular',sans-serif;
   color: #FFF;
 }
+
+/*Formulario de Contacto. */
+
+.contact-input {
+  background: transparent;
+  border: white solid 1px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Ubuntu-Regular',sans-serif;
+}
+
+.contact-input:focus {
+  background: transparent;
+  color: white;
+  border: white solid 1px;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Ubuntu-Regular',sans-serif;
+}
+
+.contact-input::placeholder {
+  background: transparent;
+  color: white !important;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Ubuntu-Regular',sans-serif;
+}
+
+.btn-contact {
+  color: white;
+  width: 100%;
+  background: transparent;
+  border: white solid 1px;
+  font-family: 'Ubuntu-Regular',sans-serif;
+}
+
+.btn-contact:hover {
+  color: white;
+  background: transparent;
+  font-family: 'Ubuntu-Bold',sans-serif;
+}
+
+
+
+
+
+
 
 @media (max-width: 991px) {
   .navbar-collapse {

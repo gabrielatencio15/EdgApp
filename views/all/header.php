@@ -68,5 +68,5 @@
 </header>
 
 
-<body class="viewport banner">
+<body class="viewport banner-home">
     <div class="container" style="padding-top: 25px;" id="main-container">

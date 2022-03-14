@@ -140,6 +140,33 @@ function changeContent(idButton)
 					}
 				});
 				break;
+			case 'contact-header':
+				$.ajax({        
+					type: 'POST',
+					data: null,
+					url:  './views/all/contact.php',              
+					success:  function (response) {
+							$("#main-container").css('display','none').html(response).slideDown("slow");
+
+							$("#btn-enviar-contacto").on("click", function() {
+									sendMessageContact();
+								}
+							  );
+
+							$("#email-contact").on({
+							keydown: function(e) {
+								if (e.which === 32)
+								return false;
+							},
+							change: function() {
+								this.value = this.value.replace(/\s/g, "");
+							}
+							});
+						
+							
+					}
+				});
+				break;
 		default:
 			$("#main-container").fadeIn( "slow", function() {
 				$("#main-container").html('');
@@ -147,3 +174,81 @@ function changeContent(idButton)
 			
 	}
 }
+
+
+function validateInput(text) 
+{
+ if(text.trim() == '')
+  {
+    return (false)
+  }
+    return (true)
+}
+
+function validateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}
+
+
+function sendMessageContact(){
+
+	let names = $("#names-contact").val();
+	let lastnames = $("#lastnames-contact").val();
+	let email = $("#email-contact").val();
+	let nacionality = $("#nationality-contact").val();
+	let message = $("#message-contact").val();
+
+	if(!validateInput(names))
+	{
+		swal('', 'El nombre es requerido - Name is required', "info");
+		return false;
+	}
+
+	if(!validateInput(lastnames))
+	{
+		swal('', 'El apellido es requerido - Last Name is required', "info");
+		return false;
+	}
+
+	if(!validateEmail(email))
+	{
+		swal('', 'El correo electrónico no es correcto, por favor indícanos un correo válido. Ejemplo: example@example.com', "info");
+		return false;
+	}
+
+	if(nacionality === '-1')
+	{
+		swal('', 'La nacionalidad es requerida - Nationality is required', "info");
+		return false;
+	}
+
+	if(!validateInput(message))
+	{
+		swal('', 'El mensaje es requerido - Message is required', "info");
+		return false;
+	}
+
+	$.ajax({        
+		type: 'POST',
+		data: {	names: names, 
+			   	lastnames: lastnames, 
+				   email: email,
+				   nacionality: nacionality,
+				   message: message
+			  },
+		url:  './controllers/sendContactMessage.php',              
+		success:  function (response) {
+				
+			console.log(response);
+			
+				
+		}
+	});
+
+}
+
