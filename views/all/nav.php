@@ -13,7 +13,7 @@
     <meta property="og:title" content="EXA Group - Luxury General Contractor">
     <meta property="og:description" content="EXA is a General Contractor leader in the international market with a unique experience in the fashion retail industry, and beyond. Read more.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="index.html">
+    <meta property="og:url" content="index.php">
     
 
 

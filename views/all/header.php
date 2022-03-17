@@ -1,66 +1,73 @@
-<link href="assets/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-<link href="assets/styles/lee-custom.css" type="text/css" rel="stylesheet">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="assets/jquery/jquery.min.js"></script>
+<link rel="stylesheet" href="assets/styles/bootstrap/bootstrap.min.css">
+<script src="assets/styles/bootstrap/bootstrap.bundle.min.js"></script>
+<link href="assets/styles/edg-custom.css" type="text/css" rel="stylesheet">
+
 <!DOCTYPE html>
 
 <html lang="es">
 
 <head>
-	<!-- <meta charset="UTF-8">
-	<title>CRUD - 0FAAOFICIAL</title> -->
+    <meta charset="utf-8">
+    <title>Enterprise Danity Group</title>
+    <link rel="icon" type="image/x-icon" href="assets/src/img/edg.ico">
 </head>
 
-<header class="main-header" style="position: relative; z-index: 10; height: 150px; padding-top: 40px;">
-    <div class="container wrapper-xl" style="margin: 0 auto; max-width: 1600px;    padding-right: 15px;padding-left: 15px;">
-        <nav class="navbar navbar-default" style="background: transparent; border: 0;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/src/img/logo.jpg" class="brand-image img-circle elevation-3" alt="EDG ENTERPRISE DANITY GROUP">
-					<span class="brand-text font-weight-light">ENTERPRISE DANITY GROUP</span>
-                </a>
-            </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <ul class="primary-menu nav navbar-nav navbar-right">
-                    <li class="menu-active">
-                        <a class="header-options" href="javascript:void(0)" id="home-header">
-                            <span>INICIO</span>
+<header class="main-header" style="padding-top: 40px;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-none">
+            <a class="navbar-brand" href="">
+                <div class="row">
+                    <div class="col-12 col-sm-3">
+                        <img src="assets/src/img/logo.png" class="brand-image" alt="EDG ENTERPRISE DANITY GROUP">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <span class="brand-text font-weight-light ">ENTERPRISE DANITY GROUP</span>
+                    </div>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse menu-links" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item menu-active">
+                        <a class="nav-link header-options" href="javascript:void(0)" id="home-header">
+                            <span class="header-options-color">INICIO</span>
                         </a>
                     </li>
 
-                    <li>
-                        <a class="header-options" href="javascript:void(0)" id="about-header">
-                            <span>SOBRE</span>
+                    <li class="nav-item">
+                        <a class="nav-link header-options" href="javascript:void(0)" id="about-header">
+                            <span class="header-options-color">SOBRE</span>
                         </a>
 
                     </li>
-                    <li>
-                        <a class="header-options" href="javascript:void(0)" id="services-header">
-                            <span>SERVICIOS</span>
+                    <li class="nav-item">
+                        <a class="nav-link header-options" href="javascript:void(0)" id="services-header">
+                            <span class="header-options-color">SERVICIOS</span>
                         </a>
 
                     </li>
-                    <li>
-                        <a class="header-options" href="javascript:void(0)" id="contact-header">
-                            <span>CONTACTO</span>
+                    <li class="nav-item">
+                        <a class="nav-link header-options" href="javascript:void(0)" id="contact-header">
+                            <span class="header-options-color">CONTACTO</span>
                         </a>
 
                     </li>
 
                 </ul>
-
-            </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
     </div>
 </header>
 
-<body style="background: black;">
 
+<body class="viewport banner-home">
+    <div class="container" style="padding-top: 25px;" id="main-container">
