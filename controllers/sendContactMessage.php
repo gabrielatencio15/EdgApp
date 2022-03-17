@@ -1,6 +1,22 @@
 <?php
 
 
+if( (!isset($_POST['names']) || empty($_POST['names'])) || (!isset($_POST['lastnames']) || empty($_POST['lastnames'])) || (!isset($_POST['email']) || empty($_POST['email'])) || (!isset($_POST['nacionality']) || empty($_POST['nacionality'])) || (!isset($_POST['message']) || empty($_POST['message'])))
+{
+    echo 'Empty field';
+    exit(); 
+}
+
+//header('Content-Type: text/html; charset=UTF-8');
+date_default_timezone_set('America/Bogota');
+
+$nombres = $_POST['names'];
+$apellidos = $_POST['lastnames'];
+$email = $_POST['email'];
+$nacionalidad = $_POST['nacionality'];
+$mensaje = $_POST['message'];
+$fechaRecibido = date('Y-m-d H:i:s');
+
 // Import PHPMailer classes into the global namespace 
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\Exception; 
@@ -41,7 +57,14 @@ $mail->Subject = 'EDG: Solicitud de Contacto';
 // Mail body content 
 $bodyContent = file_get_contents("../views/all/emailTemplate/index.html");
 
-$mail->Body    = $bodyContent; 
+$bodyContent = str_replace("___NAMES___", $nombres, $bodyContent);
+$bodyContent = str_replace("___LASTNAMES___", $apellidos, $bodyContent);
+$bodyContent = str_replace("___EMAIL___", $email, $bodyContent);
+$bodyContent = str_replace("___NATIONALITY___", $nacionalidad, $bodyContent);
+$bodyContent = str_replace("___MESSAGE___", $mensaje, $bodyContent);
+$bodyContent = str_replace("___MESSAGEDATE___", $fechaRecibido, $bodyContent);
+
+$mail->Body    = utf8_decode($bodyContent); 
  
 // Send email 
 if(!$mail->send()) { 

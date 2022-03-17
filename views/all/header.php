@@ -8,6 +8,7 @@
 <html lang="es">
 
 <head>
+    <meta charset="utf-8">
     <title>Enterprise Danity Group</title>
     <link rel="icon" type="image/x-icon" href="assets/src/img/edg.ico">
 </head>

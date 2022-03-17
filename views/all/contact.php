@@ -1,3 +1,7 @@
+<?php
+    header('Content-Type: text/html; charset=utf-8');
+?>
+
 <div class="white-line"></div>
 <h1 class="title-lg">Contáctanos - Contact us</h1>
 <div class="row">
