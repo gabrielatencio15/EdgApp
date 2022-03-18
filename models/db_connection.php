@@ -2,7 +2,7 @@
 
 function connect(){
     try {
-        $connect = new PDO('mysql:host=localhost;port=8889;dbname=crud_mvc_pdo;charset=utf8;','root','root');
+        $connect = new PDO('mysql:host=localhost;port=8889;dbname=EDG_App;charset=utf8;','root','root');
         $connect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         return $connect;	
     } catch (Exception $e) {
