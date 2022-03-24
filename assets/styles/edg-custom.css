@@ -67,8 +67,103 @@
   }
 }
 
-/* Animación botón de WhatsApp */
+/* Fin Animación botón de WhatsApp */
 
+
+/* Animación y configuración de Tipos de Visa */
+
+.text-content-tipos-visa {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: 'Ubuntu-Regular',sans-serif;
+  color: #FFF;
+}
+
+.text-content-tipos-visa-small {
+  font-size: 14px;
+}
+
+.visa{
+  text-align: center;
+}
+
+.imagen-visa{
+  width: 100%;
+  max-width: 270px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.animacion-visa {
+	-webkit-animation: jello-horizontal 1.2s 700ms both;
+	        animation: jello-horizontal 1.2s 700ms both;
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Fin Animación y configuración de Tipos de Visa */
 
 .floating-whatsapp{
 	position:fixed;
@@ -104,6 +199,7 @@
 
 html,body{
   height:100%;
+  scroll-behavior: smooth;
 }
 
 .banner-home{
@@ -152,7 +248,30 @@ html,body{
   color: #FFF;
 }
 
+.text-services-content {
+  text-align: justify;
+  font-family: 'Ubuntu-Regular',sans-serif;
+}
+
+.text-services-content-item-title {
+  font-family: 'Ubuntu-Bold',sans-serif;
+  font-size: 18px;
+}
+
+.text-services-content-title {
+  font-family: 'Ubuntu-Bold',sans-serif;
+  font-size: 16px;
+}
+
 /*Formulario de Contacto. */
+
+.contact-input-checkbox {
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  cursor: pointer !important;
+  font-family: 'Ubuntu-Regular',sans-serif;
+}
 
 .contact-input {
   background: transparent;

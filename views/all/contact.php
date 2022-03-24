@@ -288,7 +288,14 @@
         </div>
     </div>
 
-    <div class="col-md-12" style="padding-bottom: 30px;">
+    <div class="col-md-12">
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="checkPoliticas">
+            <label class="contact-input-checkbox" for="checkPoliticas"><u>Acepto la política de privacidad y los términos de servicio - I agree the privacy policy and the terms of service</u></label>
+        </div>
+    </div>
+
+    <div class="col-md-12" style="padding-bottom: 30px; padding-top: 10px;">
         <div class="form-group">
             <input type="button" id="btn-enviar-contacto" class="btn btn-lg btn-contact" value="Enviar - Send" />
         </div>
