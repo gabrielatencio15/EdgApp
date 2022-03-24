@@ -44,7 +44,7 @@ $listServices = queryServices();
         </div>
 
 
-        <div class="col-md-12" style="padding-bottom: 40px;">
+        <div class="col-md-12" style="padding-bottom: 40px; padding-top: 15px;">
 
             <div class="accordion collapse" id="accordionVisas">
 
