@@ -45,6 +45,17 @@ function changeContent(idButton)
 					}
 				});
 				break;
+			case 'services-header':
+				$.ajax({        
+					type: 'POST',
+					data: null,
+					url:  './views/all/services.php',              
+					success:  function (response) {
+							$("#main-container").css('display','none').html(response).slideDown("slow");;
+						
+					}
+				});
+				break;
 			case 'contact-header':
 				$.ajax({        
 					type: 'POST',
@@ -137,6 +148,12 @@ function sendMessageContact(){
 		swal('', 'El mensaje es requerido - Message is required', "info");
 		return false;
 	}
+
+	if(!jQuery("#checkPoliticas").is(":checked"))
+	{
+		swal('', 'Debes aceptar la política de privacidad - You must agree the privacy policy', "info");
+		return false;
+	}
 	
 	$.ajax({        
 		type: 'POST',
@@ -187,3 +204,26 @@ function sendMessageContact(){
 
 }
 
+function scrollDownPage(sub)
+{
+	if(!$("#accordionVisas").hasClass("show"))
+	{
+		setTimeout(function() {
+			$("html, body").animate({ scrollTop: 9999 }, 'fast');
+		}, 300);
+		return false;
+	}
+	else
+	{
+		if(sub)
+		{
+			setTimeout(function() {
+				$("html, body").animate({ scrollTop: 0 }, 'fast');
+			}, 300);
+			return false;
+		}
+		setTimeout(function() {
+			$("html, body").animate({ scrollTop: 9999 }, 'fast');
+		}, 300);
+	}
+}

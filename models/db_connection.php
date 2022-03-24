@@ -24,3 +24,19 @@ function queryParams($paramName)
         $result = null;
     }
 }
+
+function queryServices()
+{
+    try {
+        $SQL = "SELECT * FROM edgServices WHERE active = 1 ORDER BY listOrder ASC";
+        $result = connect()->prepare($SQL);
+        //$result->execute(array($paramName));
+        $result->execute();
+        $query = $result->fetchAll(PDO::FETCH_OBJ);	
+        return $query;
+    } catch (Exception $e) {
+        die('Error Param(SMTP) '.$e->getMessage());
+    } finally{
+        $result = null;
+    }
+}
