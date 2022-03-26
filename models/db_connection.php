@@ -13,9 +13,24 @@ function connect(){
 function queryParams($paramName)
 {
     try {
-        $SQL = "SELECT * FROM edgParams WHERE paramName = ? AND active = 1";
+        $SQL = "SELECT `paramName`, `value`  FROM edgParams WHERE paramName = ? AND active = 1";
         $result = connect()->prepare($SQL);
         $result->execute(array($paramName));
+        $query = $result->fetchAll(PDO::FETCH_OBJ);	
+        return $query;
+    } catch (Exception $e) {
+        die('Error Param(SMTP) '.$e->getMessage());
+    } finally{
+        $result = null;
+    }
+}
+
+function queryParamsByCategory($paramCategory)
+{
+    try {
+        $SQL = "SELECT `paramName`, `value` FROM edgParams WHERE paramCategory = ? AND active = 1";
+        $result = connect()->prepare($SQL);
+        $result->execute(array($paramCategory));
         $query = $result->fetchAll(PDO::FETCH_OBJ);	
         return $query;
     } catch (Exception $e) {
@@ -28,7 +43,7 @@ function queryParams($paramName)
 function queryServices()
 {
     try {
-        $SQL = "SELECT * FROM edgServices WHERE active = 1 ORDER BY listOrder ASC";
+        $SQL = "SELECT `serviceName` FROM edgServices WHERE active = 1 ORDER BY listOrder ASC";
         $result = connect()->prepare($SQL);
         //$result->execute(array($paramName));
         $result->execute();

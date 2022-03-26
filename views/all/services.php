@@ -5,13 +5,14 @@
 require_once '../../models/db_connection.php';
 
 $listServices = queryServices();
+$businessName = queryParams("Business_Name")[0]->value;
 
 ?>
 
 <div class="row" style="padding-bottom: 30px;">
     <div class="col-md-12">
         <div class="white-line"></div>
-        <p class="text-content">En Enterprise Danity Group, queremos ayudarte a comprender las normas migratorias que rigen en Colombia, con la finalidad de ayudarte a elegir de manera adecuada el tipo de visa que mas se adapte a sus necesidades, así como también explicarle como obtener su Cédula de Extranjería. Enterprise Danity Group, le acompañara en todo su proceso migratorio.</p>
+        <p class="text-content">En <?php echo $businessName; ?>, queremos ayudarte a comprender las normas migratorias que rigen en Colombia, con la finalidad de ayudarte a elegir de manera adecuada el tipo de visa que mas se adapte a sus necesidades, así como también explicarle como obtener su Cédula de Extranjería. <?php echo $businessName; ?>, le acompañara en todo su proceso migratorio.</p>
 
     </div>
 
@@ -21,8 +22,8 @@ $listServices = queryServices();
     ?>
         <div class="col-md-6">
             <div class="text-content">
-                <h2>Nuestros servicios incluyen:</h2>
-                <ul>
+                <h2 style="text-align: left;">Nuestros servicios incluyen:</h2>
+                <ul style="text-align: left;">
                     <?php
                     foreach ($listServices as $services) {
                         echo "<li>" . $services->serviceName . "</li>";
