@@ -1,3 +1,11 @@
+<?php
+//DB Connection
+require_once '../../models/db_connection.php';
+
+$businessName = queryParams("Business_Name")[0]->value;
+
+?>
+
 <div class="row">
     <div class="col-md-6">
         <div class="container">
@@ -11,7 +19,7 @@
         <div class="container">
             <div class="white-line"></div>
             <h1 class="title-lg">Visión</h1>
-            <p class="text-content">ENTERPRISE DANITY GROUP SAS, para el 2027 espera poder brindarle el mejor servicio a nuestros clientes con el fin de construir un lugar donde el extranjero pueda buscar la mejor asesoría respecto a sus trámites migratorios.</p>
+            <p class="text-content"><?php echo strtoupper($businessName); ?> SAS, para el 2027 espera poder brindarle el mejor servicio a nuestros clientes con el fin de construir un lugar donde el extranjero pueda buscar la mejor asesoría respecto a sus trámites migratorios.</p>
         </div>
     </div>
 
